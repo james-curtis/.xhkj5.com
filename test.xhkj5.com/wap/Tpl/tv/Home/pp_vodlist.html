@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>2015最新{$list_name}-最新好看的高清{$list_name}-最新{$list_name}排行推荐-{$title}</title>
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport">
+<meta name="keywords" content="<notempty name="list_keywords">
+{$list_keywords}
+<else/>
+最新{$list_name},{$keywords}
+</notempty>
+">
+<meta name="description" content="<notempty name="list_description">
+{$list_description}
+<else/>
+2014最新{$list_name}，好看的{$list_name}大全和排行榜推荐，免费在线观看，欢迎{$list_name}爱好者来到这里在线观看，如果你觉得不错的话，发给朋友大家一起来分享吧
+</notempty>
+"><include file="Home:header" />
+</head>
+<body>
+<php> $search_area=$_GET[area];
+  $search_year=$_GET[year];
+  if(empty($_GET[order])){
+  $search_order='addtime';
+  }else{
+  $search_order=$_GET[order];
+  }
+  $search_letter=$_GET[letter];
+  $search_actor=$_GET[actor]; </php>
+<SCRIPT type=text/javascript>
+	var year='{$search_year}';
+	var area='{$search_area}';
+	var letter='{$search_letter}';
+	var actor='{$search_actor}';
+	var SitePath='{$root}';
+	var SiteCid='{$list_id}';
+</SCRIPT>
+<div class="wrapper"> <include file="Home:pp_header" />
+  <section class="main">
+    <div class="mod_a globalPadding">
+      <div class="th_a"><span class="sMark"><i class="iPoint"></i>{:getlistname($list_id,'list_name')}</span></div>
+      <div class="tb_a">
+        <ul class="picTxt picTxtA clearfix" id="data_list">
+          <php>$vod_list = ff_mysql_vod('cid:'.$list_id.';year:'.$search_year.';actor:'.$search_actor.';language:'.$search_language.';area:'.$search_area.';letter:'.$search_letter.';limit:15;page:true;order:vod_'.$search_order.' desc,vod_id desc');$page = $vod_list[0]['page'];</php>
+          <gt name="vod_list.0.count" value="0">
+            <volist name="vod_list" id="ppvod">
+              <li>
+                <div class="con"> <a href="{$ppvod.vod_readurl}" target="_self">
+                  <div class="picsize"> <img  data-src="{$ppvod.vod_pic|getpicurl_s}" src="{$tpl}images/default.png" onerror="nofind(this,'{$ppvod.vod_pic|getpicurl}');" alt="{$ppvod.vod_name}"><span class="sNum">
+                    <notempty name='ppvod.vod_title'>{$ppvod.vod_title}
+                      <else/>
+                      <empty name="ppvod.vod_continu">
+                        <if condition="$list_id eq 1|$list_id eq 8|$list_id eq 9|$list_id eq 10|$list_id eq 11|$list_id eq 12|$list_id eq 13|$list_id eq 14|$list_id eq 22|$list_id eq 28|$list_id eq 30|$list_id eq 31">
+                          <else/>
+                          全集</if>
+                        <else/>
+                        <if condition="$list_id eq 1|$list_id eq 8|$list_id eq 9|$list_id eq 10|$list_id eq 11|$list_id eq 12|$list_id eq 13|$list_id eq 14|$list_id eq 22|$list_id eq 28|$list_id eq 30|$list_id eq 31">{$ppvod.vod_continu}
+                          <else/>
+                          <if condition="$list_id eq 4">第{$ppvod.vod_continu}期
+                            <else/>
+                            第{$ppvod.vod_continu}集</if>
+                        </if>
+                      </empty>
+                    </notempty>
+                    </span> </div>
+                  <span class="sTit">{$ppvod.vod_name}</span> <span class="sDes">{$ppvod.vod_actor}</span> </a> </div>
+              </li>
+            </volist>
+          </gt>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <div class="ui-page-big ui-pages" id="long-page">{$page}</div>
+</div>
+<include file="Home:pp_footer" /> 
+<script>
+// 重置图片尺寸
+resizeImgCommon('data_list');
+$(window).on('resize',function(){resizeImgCommon('data_list');});
+</script>
+</body>
+</html>

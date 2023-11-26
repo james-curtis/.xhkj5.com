@@ -1,0 +1,99 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>第三方支付接入参数</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel='stylesheet' type='text/css' href='__PUBLIC__/css/admin-style.css' />
+<script charset="utf-8" src="__PUBLIC__/jquery/1.11.3/jquery.min.js"></script>
+<script charset="utf-8" src="__PUBLIC__/js/admin.js"></script>
+<script>
+$(document).ready(function(){
+	$("#tabs>a").click(function(){
+		var no = $(this).attr('id');
+		var n = $("#tabs>a").length;
+		showtab('tabs',no,n);
+		$("#tabs>a").removeClass("on");
+		$(this).addClass("on");
+		return false;
+	});
+});
+</script>
+</head>
+<body class="body">
+<div class="title">
+	<div class="tabs" id="tabs">
+  <a href="javascript:void(0)" class="on" onfocus="this.blur();" id="1">基本设置</a>
+  <a href="javascript:void(0)" onfocus="this.blur();" id="2">支付宝</a>
+  <a href="javascript:void(0)" onfocus="this.blur();" id="3">微信支付</a>
+  <a href="javascript:void(0)" onfocus="this.blur();" id="4">PayPal</a>
+  <a href="javascript:void(0)" onfocus="this.blur();" id="5">瑞捷支付</a>
+ 	</div>
+</div>
+<div class="add">
+  <form action="?s=Admin-Config-Update-type-pay" method="post" name="myform" id="myform">
+  <div id="tabs1">
+    <ul><li class="left">用户充值最低金额：</li>
+      <li class="right"><input type="text" class="w120" name="config[user_pay_small]" maxlength="8" value="<?php echo ($user_pay_small); ?>">
+      <label>用户每次最低充值金额</label>
+      </li>
+    </ul>    
+    <ul><li class="left">用户充值影币比例：</li>
+      <li class="right"><input type="text" class="w120" name="config[user_pay_scale]" maxlength="8" value="<?php echo ($user_pay_scale); ?>">
+      <label>1元人民币等于多少影币</label></li>
+    </ul>
+    <ul><li class="left">VIP会员售价：</li>
+      <li class="right"><input type="text" class="w120" name="config[user_pay_vip_ext]" maxlength="8" value="<?php echo ($user_pay_vip_ext); ?>">
+      <label>（影币/天），按（天）销售</label></li>
+    </ul>
+    <ul><li class="left">VIP购买最少天数：</li>
+      <li class="right"><input type="text" class="w120" name="config[user_pay_vip_small]" maxlength="8" value="<?php echo ($user_pay_vip_small); ?>">
+      <label>用户升级时自动计算所需影币。</label></li>
+    </ul>
+    <ul><li class="left">付费点播方案说明：</li>
+      <li class="right text-left">支持两种付费点播运营模式（VIP会员包天模式、单片点播扣费模式）<br />相关链接：<a href="?s=Admin-Orders-Show" style="color:green">充值订单管理</a> <a href="http://cdn.feifeicms.co/server/v3/jump.php?id=4&version=<?php echo L("feifeicms_version");?>" target="_blank" style="color:red">商家申请及付费设置教程</a></li>
+    </ul>
+  </div>
+  <div id="tabs2" style="display:none">
+    <ul><li class="left">支付宝收款账号：</li>
+      <li class="right"><input type="text" class="w300" name="config[pay_alipay_account]" value="<?php echo ($pay_alipay_account); ?>"></li>
+    </ul>
+    <ul><li class="left">合作者身份 (PID):</li>
+      <li class="right"><input type="text" class="w300" name="config[pay_alipay_appid]" value="<?php echo ($pay_alipay_appid); ?>"></li>
+    </ul>
+    <ul><li class="left">交易安全校验码 (key):</li>
+      <li class="right"><input type="text" class="w300" name="config[pay_alipay_appkey]" value="<?php echo ($pay_alipay_appkey); ?>"></li>
+    </ul>
+  </div>
+  <div id="tabs3" style="display:none">
+    <ul><li class="left">公众号ID：</li>
+      <li class="right"><input type="text" class="w300" name="config[pay_wxpay_account]" value="<?php echo ($pay_wxpay_account); ?>"></li>
+    </ul>
+    <ul><li class="left">商户号:</li>
+      <li class="right"><input type="text" class="w300" name="config[pay_wxpay_appid]" value="<?php echo ($pay_wxpay_appid); ?>"></li>
+    </ul>
+    <ul><li class="left">商户密钥:</li>
+      <li class="right"><input type="text" class="w300" name="config[pay_wxpay_appkey]" value="<?php echo ($pay_wxpay_appkey); ?>"></li>
+    </ul>
+  </div>
+  <div id="tabs4" style="display:none">
+    <ul><li class="left">PayPal收款账号：</li>
+      <li class="right"><input type="text" class="w300" name="config[pay_paypal_account]" value="<?php echo ($pay_paypal_account); ?>"></li>
+    </ul>
+  </div>
+  <div id="tabs5" style="display:none">
+    <ul><li class="left">支付商家编号：</li>
+      <li class="right"><input type="text" class="w300" name="config[pay_rj_appid]" value="<?php echo ($pay_rj_appid); ?>"></li>
+    </ul>
+    <ul><li class="left">支付商家密钥：</li>
+      <li class="right"><input type="text" class="w300" name="config[pay_rj_appkey]" value="<?php echo ($pay_rj_appkey); ?>"></li>
+    </ul>
+  </div>
+  <!-- -->
+  <ul class="footer">
+    <input type="submit" name="submit" value="提交"> <input type="reset" name="reset" value="重置">
+  </ul>
+  </form>
+</div>
+<center>Powered by <a href="<?php echo L("feifeicms_homeurl");?>" target="_blank">feifeicms</a> <font color="#FF0000"><?php echo L("feifeicms_version");?></font></center>
+</body>
+</html>

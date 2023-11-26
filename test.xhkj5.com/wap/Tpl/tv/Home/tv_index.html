@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>2014最新{$list_name}-最新好看的高清{$list_name}-最新{$list_name}排行推荐-{$title}</title>
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport">
+<meta name="keywords" content="{$keywords}">
+<meta name="description" content="{$description}">
+<include file="Home:header" />
+</head>
+<body>
+<div class="wrapper">
+<include file="Home:pp_header" />
+  <section class="main">
+    <div class="mod_a globalPadding">
+      <div class="th_a"><span class="sMark"><i class="iPoint"></i>{:getlistname(15,'list_name')}</span><a href="{:getlistname(15,'list_url')}" class="aMore" target="_blank"><i class="moreArrow"></i></a></div>
+      <div class="tb_a">
+        <ul class="picTxt picTxtA clearfix" id="data_list">
+          <php>$focus=ff_mysql_vod('limit:1,6;cid:15;order:vod_addtime desc')</php>
+          <fflist name="focus" id="ppvod">
+            <li>
+              <div class="con"> <a href="{$ppvod.vod_readurl}" target="_self">
+                <div class="picsize"> <img  data-src="{$ppvod.vod_pic|getpicurl_s}" src="{$tpl}images/default.png" onerror="nofind(this,'{$ppvod.vod_pic|getpicurl}');" alt="{$ppvod.vod_name}"><span class="sNum">
+                  <notempty name='ppvod.vod_title'>{$ppvod.vod_title}
+                    <else/>
+                    <empty name="ppvod.vod_continu">全集
+                      <else/>
+                     更新至第{$ppvod.vod_continu}集</empty>
+                  </notempty>
+                  </span> </div>
+                <span class="sTit">{$ppvod.vod_name}</span> <span class="sDes">{$ppvod.vod_actor}</span> </a> </div>
+            </li>
+          </fflist>
+        </ul>
+      </div>
+    </div>
+    <div class="mod_a globalPadding">
+      <div class="th_a"><span class="sMark"><i class="iPoint"></i>{:getlistname(16,'list_name')}</span><a href="{:getlistname(16,'list_url')}" class="aMore" target="_blank"><i class="moreArrow"></i></a></div>
+      <div class="tb_a">
+        <ul class="picTxt picTxtA clearfix" id="data_list">
+          <php>$focus=ff_mysql_vod('limit:1,6;cid:16;order:vod_addtime desc')</php>
+          <fflist name="focus" id="ppvod">
+            <li>
+              <div class="con"> <a href="{$ppvod.vod_readurl}" target="_self">
+                <div class="picsize"><img  data-src="{$ppvod.vod_pic|getpicurl_s}" src="{$tpl}images/default.png" onerror="nofind(this,'{$ppvod.vod_pic|getpicurl}');" alt="{$ppvod.vod_name}"><span class="sNum">
+                  <notempty name='ppvod.vod_title'>{$ppvod.vod_title}
+                    <else/>
+                    <empty name="ppvod.vod_continu">
+                      <else/>
+                      {$ppvod.vod_continu}</empty>
+                  </notempty>
+                  </span> </div>
+                <span class="sTit">{$ppvod.vod_name}</span> <span class="sDes">{$ppvod.vod_actor}</span> </a> </div>
+            </li>
+          </fflist>
+        </ul>
+      </div>
+    </div>
+    <div class="mod_a globalPadding">
+      <div class="th_a"><span class="sMark"><i class="iPoint"></i>{:getlistname(17,'list_name')}</span><a href="{:getlistname(17,'list_url')}" class="aMore" target="_blank"><i class="moreArrow"></i></a></div>
+      <div class="tb_a">
+        <ul class="picTxt picTxtA clearfix" id="data_list">
+          <php>$focus=ff_mysql_vod('limit:1,6;cid:17;order:vod_addtime desc')</php>
+          <fflist name="focus" id="ppvod">
+            <li>
+              <div class="con"> <a href="{$ppvod.vod_readurl}" target="_self">
+                <div class="picsize"> <img  data-src="{$ppvod.vod_pic|getpicurl_s}" src="{$tpl}images/default.png" onerror="nofind(this,'{$ppvod.vod_pic|getpicurl}');" alt="{$ppvod.vod_name}"><span class="sNum">
+                  <notempty name='ppvod.vod_title'>{$ppvod.vod_title}
+                    <else/>
+                    <empty name="ppvod.vod_continu">
+                      <else/>
+                      {$ppvod.vod_continu}</empty>
+                  </notempty>
+                  </span> </div>
+                <span class="sTit">{$ppvod.vod_name}</span> <span class="sDes">{$ppvod.vod_actor}</span> </a> </div>
+            </li>
+          </fflist>
+        </ul>
+      </div>
+    </div>
+    <div class="mod_a globalPadding">
+      <div class="th_a"><span class="sMark"><i class="iPoint"></i>{:getlistname(18,'list_name')}</span><a href="{:getlistname(18,'list_url')}" class="aMore" target="_blank"><i class="moreArrow"></i></a></div>
+      <div class="tb_a">
+        <ul class="picTxt picTxtA clearfix" id="data_list">
+          <php>$focus=ff_mysql_vod('limit:1,6;cid:18;order:vod_addtime desc')</php>
+          <fflist name="focus" id="ppvod">
+            <li>
+              <div class="con"> <a href="{$ppvod.vod_readurl}" target="_self">
+                <div class="picsize"> <img  data-src="{$ppvod.vod_pic|getpicurl_s}" src="{$tpl}images/default.png" onerror="nofind(this,'{$ppvod.vod_pic|getpicurl}');" alt="{$ppvod.vod_name}"><span class="sNum">
+                  <notempty name='ppvod.vod_title'>{$ppvod.vod_title}
+                    <else/>
+                    <empty name="ppvod.vod_continu">
+                      <else/>
+                      {$ppvod.vod_continu}</empty>
+                  </notempty>
+                  </span> </div>
+                <span class="sTit">{$ppvod.vod_name}</span> <span class="sDes">{$ppvod.vod_actor}</span> </a> </div>
+            </li>
+          </fflist>
+        </ul>
+      </div>
+    </div>
+    <div class="mod_a globalPadding">
+      <div class="th_a"><span class="sMark"><i class="iPoint"></i>{:getlistname(19,'list_name')}</span><a href="{:getlistname(19,'list_url')}" class="aMore" target="_blank"><i class="moreArrow"></i></a></div>
+      <div class="tb_a">
+        <ul class="picTxt picTxtA clearfix" id="data_list">
+          <php>$focus=ff_mysql_vod('limit:1,6;cid:19;order:vod_addtime desc')</php>
+          <fflist name="focus" id="ppvod">
+            <li>
+              <div class="con"> <a href="{$ppvod.vod_readurl}" target="_self">
+                <div class="picsize"> <img  data-src="{$ppvod.vod_pic|getpicurl_s}" src="{$tpl}images/default.png" onerror="nofind(this,'{$ppvod.vod_pic|getpicurl}');" alt="{$ppvod.vod_name}"><span class="sNum">
+                  <notempty name='ppvod.vod_title'>{$ppvod.vod_title}
+                    <else/>
+                    <empty name="ppvod.vod_continu">
+                      <else/>
+                      {$ppvod.vod_continu}</empty>
+                  </notempty>
+                  </span> </div>
+                <span class="sTit">{$ppvod.vod_name}</span> <span class="sDes">{$ppvod.vod_actor}</span> </a> </div>
+            </li>
+          </fflist>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
+<include file="Home:pp_footer" />
+<script>
+// 重置图片尺寸
+resizeImgCommon('data_list');
+$(window).on('resize',function(){resizeImgCommon('data_list');});
+</script> 
+</body>
+</html>

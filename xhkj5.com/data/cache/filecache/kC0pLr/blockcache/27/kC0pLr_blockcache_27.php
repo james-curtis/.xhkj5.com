@@ -1,0 +1,42 @@
+<?php
+$data = array (
+  'exp' => 1497171419,
+  'data' => 
+  array (
+    'bid' => '27',
+    'blockclass' => 'html_html',
+    'blocktype' => '0',
+    'name' => '群组_右侧广告1',
+    'title' => '',
+    'classname' => 'cl_block_bm',
+    'summary' => '<a href="#" target="_blank"><img src="template/comiis_nby/ads/vad02.jpg" width="100%" /></a>',
+    'uid' => '1',
+    'username' => '小柯',
+    'styleid' => '0',
+    'blockstyle' => '',
+    'picwidth' => '0',
+    'picheight' => '0',
+    'target' => 'blank',
+    'dateformat' => 'Y-m-d',
+    'dateuformat' => '0',
+    'script' => 'banner',
+    'param' => 
+    array (
+      'pic' => 'template/comiis_nby/ads/vad02.jpg',
+      'url' => '#',
+      'atarget' => '_blank',
+      'width' => '100%',
+      'height' => '',
+      'text' => '',
+      'items' => 10,
+    ),
+    'shownum' => '10',
+    'cachetime' => '0',
+    'cachetimerange' => '0,0',
+    'punctualupdate' => '0',
+    'hidedisplay' => '0',
+    'dateline' => '1495285008',
+    'notinherited' => '0',
+    'isblank' => '0',
+  ),
+);

@@ -1,0 +1,19 @@
+
+<html>
+<head>
+<script language="javascript">
+var a='<div><A href="http://www.jqsite.com/"></A><a href="http://www.jqsite1.com/"></a><a href="http://www.jqsite2.com/"></a></div>';
+
+    var b=/<a([\s]+|[\s]+[^<>]+[\s]+)href=(\"([^<>"\']*)\"|\'([^<>"\']*)\')[^<>]*>/gi;
+    var s=a.toLowerCase().match(b);
+    console.log(s);
+    for(var i= 0;i<s.length;i++)
+    {
+        var ss = s.toLowerCase().match(b);
+        console.log(RegExp.$3+RegExp.$4);
+    }
+</script>
+</head>
+<body>
+</body>
+</html>

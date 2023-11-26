@@ -1,0 +1,34 @@
+a:2:{i:0;s:3243:"a:1:{s:4:"main";a:16:{i:0;a:2:{s:4:"type";s:4:"text";s:7:"content";s:259:"通常情况下,Discuz!论坛一般会启用QQ互联应用,这不但对于用户的真实性有帮忙,而且对用户粘性也非常有用,可有时候启用或关闭QQ互联,却会提示系统繁忙,,请稍后再试,这可怎么办呢?
+原创解决办法
+工具/原料1.discuz论坛
+
+2.phpadmin
+
+3.discuzx_update_sitekey.php（下载地址：";}i:1;a:3:{s:7:"content";s:64:"http://discuz.gtimg.cn/cloud/download/discuzx_update_sitekey.zip";s:4:"type";s:3:"url";s:9:"extraInfo";a:1:{s:3:"url";s:64:"http://discuz.gtimg.cn/cloud/download/discuzx_update_sitekey.zip";}}i:2;a:2:{s:4:"type";s:4:"text";s:7:"content";s:109:"）
+
+
+
+方法/步骤
+
+
+1.首先用phpmyadmin管理数据库， 找到pre_common_plugin这个表，点击小笔的图标进行编辑。";}i:3;a:3:{s:7:"content";s:79:"http://www.xhkj5.com/data/attachment/forum/201701/17/174935ceygvucd4pnbym4b.jpg";s:4:"type";s:5:"image";s:9:"extraInfo";a:1:{s:3:"aid";i:23;}}i:4;a:2:{s:4:"type";s:4:"text";s:7:"content";s:101:"2.修改pre_common_plugin表中的第二行 available 的值为0（1表示开启，0表示关闭） ， 其他的插件同理。
+  ";}i:5;a:3:{s:7:"content";s:79:"http://www.xhkj5.com/data/attachment/forum/201701/17/174936nnf67q671d56ccpc.jpg";s:4:"type";s:5:"image";s:9:"extraInfo";a:1:{s:3:"aid";i:24;}}i:6;a:2:{s:4:"type";s:4:"text";s:7:"content";s:149:"3.关闭所有的跟云平台有关的插件 ，然后到后台》工具》云平台诊断工具》把&quot;站点ID&quot;和&quot;站点通信KEY&quot;清空，状态选择“未开通云平台 &quot;。";}i:7;a:3:{s:7:"content";s:79:"http://www.xhkj5.com/data/attachment/forum/201701/17/174934rjtfms5twsgskshf.jpg";s:4:"type";s:5:"image";s:9:"extraInfo";a:1:{s:3:"aid";i:19;}}i:8;a:3:{s:7:"content";s:79:"http://www.xhkj5.com/data/attachment/forum/201701/17/174934cdk1auetheek3k4t.jpg";s:4:"type";s:5:"image";s:9:"extraInfo";a:1:{s:3:"aid";i:20;}}i:9;a:2:{s:4:"type";s:4:"text";s:7:"content";s:60:"4.修改之后登陆ftp上传discuzx_update_sitekey.php （下载地址：";}i:10;a:3:{s:7:"content";s:64:"http://discuz.gtimg.cn/cloud/download/discuzx_update_sitekey.zip";s:4:"type";s:3:"url";s:9:"extraInfo";a:1:{s:3:"url";s:64:"http://discuz.gtimg.cn/cloud/download/discuzx_update_sitekey.zip";}}i:11;a:2:{s:4:"type";s:4:"text";s:7:"content";s:293:"）使用http://域名/discuzx_update_sitekey.php ，访问提示成功即可重新开启。
+
+5.访问 http://域名/admin.php?action=cloud&amp;operation=open  开启qq互联即可。（如果不能开通继续看下面）
+6.进入网站后台，点击应用（此时QQ互联处于未启用状态）
+
+
+7.点击启用，然后会提示插件已启用
+
+
+8.再去看云平台";}i:12;a:3:{s:7:"content";s:79:"http://www.xhkj5.com/data/attachment/forum/201701/17/174935q0qmafmezrp9jr0f.jpg";s:4:"type";s:5:"image";s:9:"extraInfo";a:1:{s:3:"aid";i:21;}}i:13;a:2:{s:4:"type";s:4:"text";s:7:"content";s:36:"9.你会惊讶地发现
+
+
+QQ互联已经开通";}i:14;a:3:{s:7:"content";s:79:"http://www.xhkj5.com/data/attachment/forum/201701/17/174935uix6744m7m3d8wd6.jpg";s:4:"type";s:5:"image";s:9:"extraInfo";a:1:{s:3:"aid";i:22;}}i:15;a:2:{s:4:"type";s:4:"text";s:7:"content";s:300:"10.然后去前台，就可以登录了
+
+太神奇了有木有
+-----------------------------------------------------------------------希望哪些不能开通云平台的站长能够开通
+
+
+如果还有什么疑问欢迎加我QQ2444300667
+----------------------------------------------------------------此教程先在本论坛发布再发布到百度经验上";}}}";i:1;N;}

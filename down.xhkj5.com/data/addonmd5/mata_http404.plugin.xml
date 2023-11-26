@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Addon MD5]]></item>
+	<item id="ID"><![CDATA[mata_http404.plugin]]></item>
+	<item id="RevisionID"><![CDATA[9064]]></item>
+	<item id="SN"><![CDATA[2018031023Wb2wTZI6yu]]></item>
+	<item id="RevisionDateline"><![CDATA[1369990399]]></item>
+	<item id="Data">
+		<item id="/discuz_plugin_mata_http404_SC_UTF8.xml"><![CDATA[08e57838800b9ec9b882190024b12ebe]]></item>
+		<item id="/http404.class.php"><![CDATA[90df3e56661da7fc4310533be800e88b]]></item>
+		<item id="/discuz_plugin_mata_http404_TC_UTF8.xml"><![CDATA[06c063213f8261a1d8762e3bc91a53c3]]></item>
+		<item id="/discuz_plugin_mata_http404_SC_GBK.xml"><![CDATA[13c935438219c9db2ea393721c3a2f8c]]></item>
+		<item id="/discuz_plugin_mata_http404_TC_BIG5.xml"><![CDATA[d3e179ba55dc4707e7b049ff61381c38]]></item>
+	</item>
+</root>

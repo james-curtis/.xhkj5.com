@@ -1,0 +1,7 @@
+<?php if (!defined('THINK_PATH')) exit();?><!--弹出框展示观看记录 -->
+<?php if(!empty($vod_ids)): ?><ol class="ff-record">
+  <?php $_result=ff_mysql_vod('ids:'.$vod_ids.';limit:0;field:list_id,list_dir,vod_id,vod_ename,vod_name;cache_name:default;cache_time:default;order:vod_id;sort:desc');;if(is_array($_result)): $i = 0; $__LIST__ = $_result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$feifei): ++$i;$mod = ($i % 2 )?><li><a href="<?php echo ff_url_vod_read($feifei['list_id'],$feifei['list_dir'],$feifei['vod_id'],$feifei['vod_ename'],$feifei['vod_jumpurl']);?>" title="<?php echo ($feifei["vod_name"]); ?>"><?php echo (msubstr($feifei["vod_name"],0,15,true)); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+  </ol>
+  <?php if(($site_user_id)  >  "0"): ?><p class="ff-record-more text-center"><a href="<?php echo ff_url('user/center',array('action'=>'history'));?>"><span class="glyphicon glyphicon-time"></span> 更多观看记录</a></p><?php endif; ?>
+<?php else: ?>
+	<?php if(($site_user_id)  >  "0"): ?><p class="ff-record-more text-center"><a class="ff-user user-login-modal" href="<?php echo ff_url('user/login');?>"><span class="glyphicon glyphicon-time"></span> 暂无观看记录</a></p><?php endif; ?><?php endif; ?>

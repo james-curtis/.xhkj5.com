@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>搜索--{$search_wd}{$search_actor}{$search_area}{$search_director}{$search_year|default=''}{$search_language}{$search_letter}--的结果 - {$sitename}</title>
+<meta name="keywords" content="<notempty name="list_keywords">
+{$list_keywords}
+<else/>
+最新{$list_name},{$keywords}
+</notempty>
+" />
+<meta name="description" content="<notempty name="list_keywords">
+{$list_description}
+<else/>
+{$description}
+</notempty>
+" />
+<meta content="{$search_wd}的搜索结果,如找不到结果请偿试缩短关键词或检查是否输入错误" name="description" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<meta content="telephone=no" name="format-detection">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta content="{$sitename}" name="apple-mobile-web-app-title">
+<include file="Home:header" />
+</head><body>
+<div class="wrapper">
+<include file="Home:pp_header" />
+<section class="searchMain globalPadding" id="search_main">
+  <nav class="searchNav" id="search_menu" style="overflow: hidden;">
+    <div class="con clearfix" >
+      <p> <a target="_self" href="javascript:void(0)" class="cur">搜索和 <strong style="color:#e12160;">{$search_wd}</strong> 相关的影片</a> </p>
+    </div>
+  </nav>
+  <ul class="ulPicTxt clearfix" id="data_list">
+    <php>$vod_list = ff_mysql_vod('wd:'.$search_wd.';actor:'.$search_actor.';year:'.$search_year.';language:'.$search_language.';area:'.$search_area.';letter:'.$search_letter.';limit:20;page:true;order:vod_addtime desc');$page = $vod_list[0]['page'];</php>
+    <gt name="vod_list.0.count" value="0">
+      <volist name="vod_list" id="ppvod">
+        <li>
+          <div class="pic"><a href="{$ppvod.vod_readurl}" target="_self"><img  data-src="{$ppvod.vod_pic|getpicurl_s}" src="{$tpl}images/default.png" onerror="nofind(this,'{$ppvod.vod_pic|getpicurl}');" alt="{$ppvod.vod_name}" style="display:block;"><span class="sStyle">{$ppvod.list_name}</span></a></div>
+          <div class="txt"> <span class="sTit"><a href="{$ppvod.vod_readurl}" target="_self">{$ppvod.vod_name}</a></span> <span class="sDes">
+            <empty name="ppvod.vod_continu">全集
+              <else/>
+              更新至第{$ppvod.vod_continu}集</empty>
+            </span>
+            <p class="playList clearfix"> <span><em>主演：</em>{$ppvod.vod_actor|ff_search_url}</span> <span><em>导演：</em>{$ppvod.vod_director|msubstr=0,10|ff_search_url}</span> <span><em>地区：</em>{$ppvod.vod_area|default='未知'|ff_search_url}</span> <span><em>年份：</em>{$ppvod.vod_year|default='未录入'|ff_search_url}</span> </p>
+            <span class="sBtn"> <a href="{$ppvod.vod_readurl}" class="aPlayBtn" rel="nofollow">播放</a> </span> </div>
+        </li>
+      </volist>
+      <div style="clear:both;"></div>
+      <div class="ui-page-big ui-pages" id="long-page">{$page}</div>
+      <else/>
+      <p>没有相关影片哦！</p>
+    </gt>
+  </ul>
+</section>
+<include file="Home:pp_footer" />
+</body>
+</html>

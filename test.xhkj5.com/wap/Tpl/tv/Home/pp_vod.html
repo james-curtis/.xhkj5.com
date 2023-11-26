@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>
+<in name="list_pid" value="1">《{$vod_name}》高清在线观看 -
+  <else />
+  《{$vod_name}》全集在线观看－</in>
+{$list_name} - 
+{$sitename}</title>
+<in name="list_pid" value="1">
+  <meta name="keywords" content="{$vod_name}在线观看,{$vod_name}高清,">
+  <meta name="description" content="{$vod_name}高清在线观看,{$vod_name}电影,{$vod_name}演员表,{$vod_name}上映时间：{$vod_year}, {$vod_name}剧情：{$vod_content|h|msubstr=0,100}">
+  <else />
+  <meta name="keywords" content="{$vod_name},{$vod_name}在线观看,{$vod_name}全集,{$vod_name}主题曲,{$vod_name}剧情,{$vod_name}演员表,">
+  <meta name="description" content="{$vod_name},{$vod_name}在线观看,{$vod_name}全集,{$vod_name}剧情：{$vod_content|h|msubstr=0,100}">
+</in>
+<include file="Home:header" />
+</head>
+<body>
+<div class="wrapper">
+<include file="Home:pp_header" />
+<section class="main">
+  <div class="detailPosterIntro globalPadding clearfix">
+    <div class="posterPic"><img onerror="javascript:this.src='{$tpl}/images/noimg.gif';" src="{$vod_picurl}" data-original="{$vod_picurl}" alt="{$vod_name} " ></div>
+    <div class="introTxt">
+      <h1>{$vod_name}</h1>
+      <div style="height:100%;overflow:hidden; padding:0 0;"> <span style=" padding:0 0; height:20px; line-height:17px;  "> <span class="blue">
+        <notempty name='vod_title'>{$vod_title}
+          <else/>
+          <empty name="vod_continu">
+            <if condition="$list_id eq 1|$list_id eq 8|$list_id eq 9|$list_id eq 10|$list_id eq 11|$list_id eq 12|$list_id eq 13|$list_id eq 14|$list_id eq 22|$list_id eq 28|$list_id eq 30|$list_id eq 31">
+              <else/>
+              全集</if>
+            <else/>
+            <if condition="$list_id eq 1|$list_id eq 8|$list_id eq 9|$list_id eq 10|$list_id eq 11|$list_id eq 12|$list_id eq 13|$list_id eq 14|$list_id eq 22|$list_id eq 28|$list_id eq 30|$list_id eq 31">{$vod_continu}
+              <else/>
+              第{$vod_continu}集</if>
+            </if>
+          </empty>
+        </notempty>
+        </span> <span style=" padding:0 0; height:20px; line-height:17px;  ">类型：{$list_name}</span> <span style=" padding:0 0; height:20px; line-height:17px;  ">年代：{$vod_year|default='未录入'}</span> <span style=" padding:0 0; height:20px; line-height:17px;  ">地区：{$vod_area|default='未知'}</span> <span style=" padding:0 0; height:20px; line-height:17px;  ">语言： {$vod_language|default='未知'}</span> <span style=" padding:0 0; height:20px; line-height:17px;  ">导演：
+        <notempty name="vod_director">{$vod_director|msubstr=0,10|ff_search_url}
+          <else />
+          未录入</notempty>
+        </span> <span style=" padding:0 0; height:20px; line-height:17px;  ">主演：
+        <notempty name="vod_actor">{$vod_actor|ff_search_url}
+          <else />
+          未录入</notempty>
+        </span> </div>
+    </div>
+  </div>
+  <div class="tab globalPadding">
+    <ul class="tabNav clearfix">
+      <li><span class="cur">剧集</span></li>
+      <li><span class="">简介</span></li>
+      <li><span class="">评论</span></li>
+    </ul>
+  </div>
+  <script type="text/javascript">
+var cpro_id="u2071324";
+(window["cproStyleApi"] = window["cproStyleApi"] || {})[cpro_id]={at:"3",scale:"20.6",pat:"6",tn:"template_inlay_all_mobile_lu_native",rss1:"#FFFFFF",adp:"1",ptt:"0",titFF:"%E5%BE%AE%E8%BD%AF%E9%9B%85%E9%BB%91",titFS:"14",rss2:"#000000",titSU:"0",ptbg:"50",ptp:"1"}
+</script>
+
+  <div class="tabConList globalPadding">
+    <div class="tabCon" style="display: block;"> 
+      <script type="text/javascript">
+        $(function(){
+        var i=0;
+        function click_tab (){
+        $(this).addClass("current").siblings().removeClass("current").parent().parent().parent().siblings().hide().siblings("."+$(this).attr("id")).show();
+        }
+        $(".tabt span,.tabt2 span").mouseover(click_tab);
+        $(".tabt3 span").click(click_tab);
+        });
+       </script>
+      <dl class="tab2">
+      <div id="scrollx"><div class="con clearfix">
+        <dt id="tab3" class="tabt3"><b class="player_title">播放源</b>
+          <volist name="vod_playlist" id="ppvod">
+            <if condition=" $ppvod.playname neq 'bdhd'&$ppvod.playname neq 'qvod'&$ppvod.playname neq 'pvod'&$ppvod.playname neq 'gvod' &$ppvod.playname neq 'cool'&$ppvod.playname neq 'media'&$ppvod.playname neq 'real'&$ppvod.playname neq 'qvod'&$ppvod.playname neq 'swf'&$ppvod.playname neq 'flv'">
+                <span id="{$ppvod.playname}" 
+                <if condition='$i==1'>class="current"</if>
+                > {$ppvod.playername}</span>
+            </if>
+          </volist>
+        </dt></div></div>
+        
+        <volist name="vod_playlist" id="ppvod">
+          <if condition=" $ppvod.playname neq 'bdhd'&$ppvod.playname neq 'qvod'&$ppvod.playname neq 'pvod'&$ppvod.playname neq 'gvod' &$ppvod.playname neq 'cool'&$ppvod.playname neq 'media'&$ppvod.playname neq 'real'&$ppvod.playname neq 'qvod'&$ppvod.playname neq 'swf'&$ppvod.playname neq 'flv'">
+            <eq name="ppvod.playname" value="down">
+             <dd class="{$ppvod.playname}"  <if condition='$i==1'> style="display:block;"</if>>
+               <ul class="ulNumList clearfix list_1">
+              <li class="yy download">电脑访问本站可直接下载</li>
+              </ul>
+              </dd>
+              <else/>
+              <eq name="ppvod.playname" value="disk"> <dd class="{$ppvod.playname}"  <if condition='$i==1'> style="display:block;"</if>>
+                <ul class="ulNumList clearfix list_1">
+                  <volist name="ppvod['son']" id="ppvodson">
+                    <li class="yy"> <a href="{$ppvodson.playpath}" class="cur" target="_self" title="{$ppvodson.playname}" alt="{$ppvodson.playname}">{$ppvodson.playname} </a></li>
+                  </volist>
+                </ul>
+                </dd>
+                <else/>
+                <dd class="{$ppvod.playname}" 
+                <if condition='$i==1'> style="display:block;"</if>
+                >
+                <ul class="ulNumList clearfix list_1">
+                  <volist name="ppvod['son']" id="ppvodson">
+                    <li class="yy"> <a href="{$ppvodson.playurl}" class="cur" target="_self" title="{$ppvodson.playname}" alt="{$ppvodson.playname}">{$ppvodson.playname} </a></li>
+                  </volist>
+                </ul>
+                </dd>
+              </eq>
+            </eq>
+          </if>
+        </volist>
+      </dl>
+    </div>
+    <div class="tabCon" style="display: none;">
+      <ul class="ulTxt clearfix" id="movie_info_ul">
+        <li><span class="sTit">类型：</span>
+          <p><em><A class=arrow href="{$list_url}">{$list_name}</A></em> </p>
+        </li>
+        <li><span class="sTit">年代：</span>
+          <p><em>{$vod_year|default='未录入'}</em></p>
+        </li>
+        <li><span class="sTit">地区：</span>
+          <p><em>{$vod_area|default='未知'}</em></p>
+        </li>
+        <li><span class="sTit">语言：</span>
+          <p><em>{$vod_language|default='未知'}</em></p>
+        </li>
+        <li class="liAll"><span class="sTit">导演：</span>
+          <p><em>
+            <notempty name="vod_director">{$vod_director|msubstr=0,10|ff_search_url}
+              <else />
+              未录入</notempty>
+            </em></p>
+        </li>
+        <li class="liAll"><span class="sTit">主演：</span>
+          <p> <em>
+            <notempty name="vod_actor">{$vod_actor|ff_search_url}
+              <else />
+              未录入</notempty>
+            </em> </p>
+        </li>
+      </ul>
+      <p class="movieintro" id="movie_info_intro_s"><span style="color:#333;">剧情简介：</span>{$vod_content|msubstr=0,500} </p>
+    </div>
+    <!--box 影片信息 END-->
+    <div class="tabCon" style="display: none;">
+      <div class="ui-titlej" style="width:98%; margin-top:10px; padding:5px 1%; font-weight:bold; color:#333;">
+        <h3><strong style="color:#F93;">{$vod_name}</strong> 网友评论</h3>
+      </div>
+      <div style="width:98%; padding:0 1%;"> 
+        <!-- UY BEGIN --> 
+        <script type="text/javascript">
+              var uyan_config = {
+              'title':'《{$vod_name}在线观看》 - {$sitename}#{$vod_name}#', 
+              'url':'{$siteurl}{$vod_readurl}', 
+              'pic':'{$vod_picurl}', 
+              'du':'www.ffcms.cn', 
+              'su':'{$vod_id}' 
+              };
+          </script>
+        <div id="uyan_frame"></div>
+        
+        <!-- UY END --> 
+      </div>
+    </div>
+    <div class="mod_b">
+      <div class="th_b"><span class="sMark">同类型推荐</span></div>
+      <div class="tb_b">
+        <ul class="picTxt picTxtA clearfix" id="resize_list">
+          <php>$hot_week = ff_mysql_vod('cid:'.$list_id.';limit:3;order:vod_hits_month desc,vod_addtime desc');</php>
+          <volist name="hot_week" id="ppvod">
+            <li>
+              <div class="con"> <a href="{$ppvod.vod_readurl}" target="_self" style="width: 414px; height: 552px;"><img src="{$ppvod.vod_pic|getpicurl}" alt="{$vod_name}" style="width: 414px; height: 552px;"/><span class="sNum">
+                <notempty name='ppvod.vod_title'>{$ppvod.vod_title}
+                  <else/>
+                  <empty name="ppvod.vod_continu">
+                    <if condition="$list_id eq 1|$list_id eq 8|$list_id eq 9|$list_id eq 10|$list_id eq 11|$list_id eq 12|$list_id eq 13|$list_id eq 14|$list_id eq 22|$list_id eq 28|$list_id eq 30|$list_id eq 31">
+                      <else/>
+                      全集</if>
+                    <else/>
+                    <if condition="$list_id eq 1|$list_id eq 8|$list_id eq 9|$list_id eq 10|$list_id eq 11|$list_id eq 12|$list_id eq 13|$list_id eq 14|$list_id eq 22|$list_id eq 28|$list_id eq 30|$list_id eq 31">{$ppvod.vod_continu}
+                      <else/>
+                      <if condition="$list_id eq 4">第{$ppvod.vod_continu}期
+                        <else/>
+                        第{$ppvod.vod_continu}集</if>
+                    </if>
+                  </empty>
+                </notempty>
+                </span> <span class="sTit">{$ppvod.vod_name}</span> </a> </div>
+            </li>
+          </volist>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<include file="Home:pp_footer" /> 
+<script>
+// 重置图片尺寸
+resizeImgCommon('resize_list');
+$(window).on('resize',function(){resizeImgCommon('resize_list');});
+</script>
+</body>
+</html>

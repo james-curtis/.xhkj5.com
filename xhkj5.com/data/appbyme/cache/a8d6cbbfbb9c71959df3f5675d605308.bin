@@ -1,0 +1,17 @@
+a:2:{i:0;s:2800:"a:1:{s:4:"main";a:17:{i:0;a:2:{s:4:"type";s:4:"text";s:7:"content";s:146:"灰常感谢分享了此套商业源码的童鞋，这套系统我们这边亲测过，的确可以抓取网站访客的QQ号码以及网站访客的IP，源码非常简洁实用，在这里完全免费分享出来。";}i:1;a:3:{s:7:"content";s:79:"http://www.xhkj5.com/data/attachment/forum/201611/12/143819c4n474c1s4mmocd4.png";s:4:"type";s:5:"image";s:9:"extraInfo";a:1:{s:3:"aid";i:10;}}i:2;a:3:{s:7:"content";s:0:"";s:4:"type";s:3:"url";s:9:"extraInfo";a:1:{s:3:"url";s:0:"";}}i:3;a:2:{s:7:"content";s:76:"http://uploadfile.haoid.cn/content/uploadfile/201509/thum-4a471441696347.png";s:4:"type";s:5:"image";}i:4;a:2:{s:4:"type";s:4:"text";s:7:"content";s:2:")]";}i:5;a:3:{s:7:"content";s:0:"";s:4:"type";s:3:"url";s:9:"extraInfo";a:1:{s:3:"url";s:0:"";}}i:6;a:2:{s:7:"content";s:76:"http://uploadfile.haoid.cn/content/uploadfile/201509/thum-fb5c1441696348.png";s:4:"type";s:5:"image";}i:7;a:2:{s:4:"type";s:4:"text";s:7:"content";s:2:")]";}i:8;a:3:{s:7:"content";s:0:"";s:4:"type";s:3:"url";s:9:"extraInfo";a:1:{s:3:"url";s:0:"";}}i:9;a:2:{s:7:"content";s:76:"http://uploadfile.haoid.cn/content/uploadfile/201509/thum-10fb1441696348.png";s:4:"type";s:5:"image";}i:10;a:2:{s:4:"type";s:4:"text";s:7:"content";s:59:")]
+
+源码安装说明：
+1, 通过phpmyadmin  导入根目录的haoid.";}i:11;a:3:{s:7:"content";s:3:"sql";s:4:"type";s:3:"url";s:9:"extraInfo";a:1:{s:3:"url";s:27:"http://www.haoid.cn/tag/sql";}}i:12;a:2:{s:4:"type";s:4:"text";s:7:"content";s:576:"数据库文件
+2，修改根目录 config.php 数据库链接文件，建议用Notepad++来修改PHP文件
+$_SERVER[&quot;cfg_db_host&quot;] = &quot;localhost&quot;;//数据库地址
+$_SERVER[&quot;cfg_db_table&quot;] = &quot;qqfangke&quot;;//数据库名称    qqfangke修改成你的MySQL数据库名
+$_SERVER[&quot;cfg_db_usr&quot;] = &quot;qqfangke&quot;;//用户名             qqfangke修改成你MySQL数据库的用户名
+$_SERVER[&quot;cfg_db_pwd&quot;] = &quot;haoid.cn&quot;;//密码              haoid.cn修改成你MySQL数据库密码
+3，后台地址 admin/login.php 默认账号密码 admin    123456
+
+4，将接口配置里面的几个文件里面";}i:13;a:3:{s:7:"content";s:12:"www.haoid.cn";s:4:"type";s:3:"url";s:9:"extraInfo";a:1:{s:3:"url";s:19:"http://www.haoid.cn";}}i:14;a:2:{s:4:"type";s:4:"text";s:7:"content";s:290:"全部替换成你安装这套源码的域名，然后覆盖到网站
+安装完成后，记得修改 后台路径  admin修改成任意命名
+源码我们简单的查杀过木马和后门，但并不代表源码是绝对安全，请下载后自行检测安全。在使用过程中出现的任何问题请自行处理，均与本站无关，本站也不承担任何责任！
+源码下载地址：
+百度云盘下载链接: ";}i:15;a:3:{s:7:"content";s:31:"http://pan.baidu.com/s/1pJ5SKht";s:4:"type";s:3:"url";s:9:"extraInfo";a:1:{s:3:"url";s:31:"http://pan.baidu.com/s/1pJ5SKht";}}i:16;a:2:{s:4:"type";s:4:"text";s:7:"content";s:77:" 密码: 3y2j
+360云盘下载链接：http://yunpan.cn/cme4Srn2WFjBW （提取码：b01a）";}}}";i:1;N;}

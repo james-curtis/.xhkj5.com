@@ -1,0 +1,42 @@
+<?php
+$data = array (
+  'exp' => 1518350981,
+  'data' => 
+  array (
+    'bid' => '128',
+    'blockclass' => 'html_html',
+    'blocktype' => '0',
+    'name' => '首页_右侧广告1',
+    'title' => '',
+    'classname' => 'cl_block_bm cl_block_bm',
+    'summary' => '<a href="http://wpa.qq.com/msgrd?V=3&amp;uin=2444300667&amp;Site=%20%D1%B6%BB%C3%CD%F8&amp;Menu=yes&amp;from=discuz" target="_blank"><img src="http://image.xhkj5.com/tpwj/homepage/vad01.jpg" width="300" /></a>',
+    'uid' => '1',
+    'username' => '讯幻网',
+    'styleid' => '0',
+    'blockstyle' => '',
+    'picwidth' => '0',
+    'picheight' => '0',
+    'target' => 'blank',
+    'dateformat' => 'Y-m-d',
+    'dateuformat' => '0',
+    'script' => 'banner',
+    'param' => 
+    array (
+      'pic' => 'http://image.xhkj5.com/tpwj/homepage/vad01.jpg',
+      'url' => 'http://wpa.qq.com/msgrd?V=3&uin=2444300667&Site=%20%D1%B6%BB%C3%CD%F8&Menu=yes&from=discuz',
+      'atarget' => '_blank',
+      'width' => '300',
+      'height' => '',
+      'text' => '',
+      'items' => 10,
+    ),
+    'shownum' => '10',
+    'cachetime' => '0',
+    'cachetimerange' => '0,0',
+    'punctualupdate' => '0',
+    'hidedisplay' => '0',
+    'dateline' => '1499179838',
+    'notinherited' => '0',
+    'isblank' => '0',
+  ),
+);

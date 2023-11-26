@@ -1,0 +1,30 @@
+<?php
+$data = array (
+  'exp' => 0,
+  'data' => 
+  array (
+    'uid' => '1322',
+    'email' => '236168974@qq.com',
+    'username' => 'fctjl',
+    'password' => '597f7d07b21db94002e8b40c44c49cd7',
+    'status' => '0',
+    'emailstatus' => '1',
+    'avatarstatus' => '1',
+    'videophotostatus' => '0',
+    'adminid' => '0',
+    'groupid' => '11',
+    'groupexpiry' => '0',
+    'extgroupids' => '',
+    'regdate' => '1504431375',
+    'credits' => '88',
+    'notifysound' => '0',
+    'timeoffset' => '9999',
+    'newpm' => '0',
+    'newprompt' => '1',
+    'accessmasks' => '0',
+    'allowadmincp' => '0',
+    'onlyacceptfriendpm' => '0',
+    'conisbind' => '1',
+    'freeze' => '0',
+  ),
+);

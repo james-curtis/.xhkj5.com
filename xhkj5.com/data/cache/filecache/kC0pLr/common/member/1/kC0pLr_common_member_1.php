@@ -1,0 +1,30 @@
+<?php
+$data = array (
+  'exp' => 0,
+  'data' => 
+  array (
+    'uid' => '1',
+    'email' => 'admin@xhkj5.com',
+    'username' => 'Ð¡¿Â',
+    'password' => '970f70b2cb1227a9c4a6502988553e0e',
+    'status' => '0',
+    'emailstatus' => '1',
+    'avatarstatus' => '1',
+    'videophotostatus' => '0',
+    'adminid' => '1',
+    'groupid' => '1',
+    'groupexpiry' => '0',
+    'extgroupids' => '',
+    'regdate' => '1478177580',
+    'credits' => 45438,
+    'notifysound' => '0',
+    'timeoffset' => '9999',
+    'newpm' => '0',
+    'newprompt' => '0',
+    'accessmasks' => '0',
+    'allowadmincp' => '1',
+    'onlyacceptfriendpm' => '0',
+    'conisbind' => '1',
+    'freeze' => '0',
+  ),
+);

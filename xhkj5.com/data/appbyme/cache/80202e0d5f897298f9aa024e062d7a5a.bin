@@ -1,0 +1,15 @@
+a:2:{i:0;s:926:"a:1:{s:4:"main";a:2:{i:0;a:2:{s:4:"type";s:4:"text";s:7:"content";s:683:"最近逛国外坛子的时候发现一新RFID神器：Mifare Classic Tool (MCT) - 一款用来读取/编辑/分析Mifare Classic卡片的安卓软件。
+功能如下：
+* 读取Mifare Classic卡片 * 编辑并保存卡片的数据
+* 写入Mifare Classic卡片 * 复制Mifare Classic卡片 (写入数据文件从一张卡片到一张新卡；不包括第一区块)
+* 密匙管理基于字典攻击写入你知道的密匙到一个文件中（字典）.MCT会尝试用这些密匙认证所有区块并且尽可能读取
+* 创建/编辑并保存密匙文件（字典）
+* 显示卡片数据为高亮的ASCII
+* 显示卡片数据为7-Bit US-ASCII
+* 显示Mifare Classic卡片准入条件为一个表（译者：就是根据控制位判断该区段为keyA控制还是keyB控制）
+* 显示Mifare Classic卡片为数值的值块 * 内置手册
+
+
+
+Mifare_Classic_Tool[2.0.4]汉化版
+下载地址： ";}i:1;a:3:{s:7:"content";s:36:"http://www.10pan.cc/file-551253.html";s:4:"type";s:3:"url";s:9:"extraInfo";a:1:{s:3:"url";s:36:"http://www.10pan.cc/file-551253.html";}}}}";i:1;N;}

@@ -1,0 +1,29 @@
+<div class="mask" id="mask_box"></div>
+<header class="header clearfix">
+  <p class="headLeft"><a href="/" class="aLogo"></a></p>
+  <p class="headRight"> <a class="aHome" href="/" target="_self"><span>首页</span></a> <a href="javascript:void(0);" class="aNav"><span>导航</span></a> <a href="javascript:void(0);" class="aSearch"><span>搜索</span></a> <a href="javascript:void(0);" target="_self" class="aUnLogin"><span id="unameHeader">历史</span></a> </p>
+  <section id="ls_box" class="searchMenu" style="display: none;">
+    <div class="hisBox fn-left">
+      <div class="looked-box" id="history"> </div>
+    </div>
+  </section>
+</header>
+<section id="search_box" class="searchMenu" style="display: none;">
+  <form action="/index.php?s=vod-search" method="post" id="search_form">
+    <div class="searchFormCon globalPadding">
+      <p class="pSearchForm">
+        <input type="text" class="searchTxt searchTxtBlur ac_input" name="wd" id="wd" autocomplete="off" >
+        <input type="submit" value="" class="searchBtn">
+        <i class="clearSearchBtn"><em></em></i> </p>
+    </div>
+  </form>
+  <div class="search_hotkey">{$hotkey}</div>
+</section>
+<nav class="subNav globalPadding index_menu_top" id="nav_menu">
+  <div class="con clearfix">     <p>
+      <php>$cidarr=array(2,1,3,4,35,51,52);</php>
+      <volist name="cidarr" id="ppcid">
+        <a href="{:getlistname($ppcid,'list_url')}"  target="_self">{:getlistname($ppcid)}</a> </volist>
+    </p></div>
+</nav>
+<div>{:getadsurl('head')}</div>
